@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquabot Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="ROW1">
+        <!-- PH Card -->
+            <div class="card">
+
+                <div class="header">
+                    <h2>  PH</h2>
+                    
+                </div>
+
+                <div class="IC">
+                    
+                    <div class="PH_icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <!-- วงกลม -->
+                    <div class="circle" id="circle_PH">
+                        <div class="inner">
+                            <div id="PH_value"> --% </div>
+                            <small> PH </small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Status -->
+                <!-- <div class="status">
+                    <div id="dot" class="dot"></div>
+                    <span id="statusText"> Loading... </span>
+                </div> -->
+
+            </div>
+
+        <!-- temp Card -->
+
+            <div class="card">
+
+                <div class="header">
+                    <h2>  Temperature</h2>
+                    
+                </div>
+                <div class="IC">
+                    <div class="Temp_icon">
+                        <i class="fa-solid fa-temperature-half"></i>
+                    </div>
+                    
+                    <!-- วงกลม -->
+                    <div class="circle" id="circle_temp">
+                        <div class="inner">
+                            <div id="Temp_value"> -- °C </div>
+                            <small> Temp </small>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+
+        <!-- TDS Card -->
+            <div class="card">
+
+                <div class="header">
+                    <h2>TDS</h2>
+                    
+                </div>
+                <div class="IC">
+                    <div class="TDS_icon">
+                        <i class="fa-solid fa-tint"></i>
+                    </div>
+                    <!-- วงกลม -->
+                    <div class="circle" id="circle_TDS">
+                        <div class="inner">
+                            <div id="TDS_value"> --% </div>
+                            <small> TDS </small>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+
+    </div>
+    <script src="./js/dashboard.js"></script>
+</body>
+</html>
