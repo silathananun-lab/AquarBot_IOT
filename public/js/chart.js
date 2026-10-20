@@ -250,11 +250,17 @@ function switchTab(tabName) {
 window.switchTab = switchTab;
 
 async function loadchart() {
-    const periodSelect = document.getElementById('periodSelect'); // ตรวจสอบ ID ของ Select period ใน HTML ของคุณ
+    const periodSelect = document.getElementById('periodSelect'); 
     let period = periodSelect ? periodSelect.value : 'day';
     
     try {
-        const response = await fetch(`${API_BASE_URL}/api/sensor_data?period=${period}`);
+        // 🛠️ เพิ่ม Header ngrok-skip-browser-warning ตรงนี้เพื่อให้ดึงข้อมูลผ่าน ngrok ได้สำเร็จ
+        const response = await fetch(`${API_BASE_URL}/api/sensor_data?period=${period}`, {
+            headers: {
+                'ngrok-skip-browser-warning': 'true'
+            }
+        });
+
         if (!response.ok) {
             throw new Error(`API Error: ${response.status}`);
         }
