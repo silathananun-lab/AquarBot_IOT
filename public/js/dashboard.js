@@ -565,7 +565,7 @@ async function fetchSensorData() {
             const data_PH = data.map(item => ({ PH: parseFloat(item.ph) }));
             const data_TDS = data.map(item => ({ TDS: parseFloat(item.TDS) }));
             
-            updateStatistics(data_PH, "PH");
+            updateStatistics(data_PH, "PH");  
             updateStatistics(data_temp, "temp");
             updateStatistics(data_TDS, "TDS");
         }

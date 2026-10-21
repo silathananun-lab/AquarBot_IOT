@@ -287,16 +287,20 @@ async function loadchart() {
             date: item.date              
         }));
         
+        let  TEXT = document.getElementById("Htext");
         let activeData, unit;
         if (currentTab === 'ph') {
             activeData = PH_Data;
             unit = "PH";
-        } else if (currentTab === 'temp') {
+            TEXT.textContent = "PH"
+        } else if (currentTab === 'TEMP') {
             activeData = temp_Data;
             unit = "temp";
+            TEXT.textContent = "PH"
         } else if (currentTab === 'tds') {
             activeData = TDS_Data;
             unit = "TDS";
+            TEXT.textContent = "TDS"
         }
 
         updateCurrent(activeData, "current-sensor", unit);
