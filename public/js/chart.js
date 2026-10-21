@@ -293,7 +293,7 @@ async function loadchart() {
             activeData = PH_Data;
             unit = "PH";
             TEXT.textContent = "PH"
-        } else if (currentTab === 'TEMP') {
+        } else if (currentTab === 'temp') {
             activeData = temp_Data;
             unit = "temp";
             TEXT.textContent = "TEMP"
