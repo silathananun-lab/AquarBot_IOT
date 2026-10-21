@@ -296,7 +296,7 @@ async function loadchart() {
         } else if (currentTab === 'TEMP') {
             activeData = temp_Data;
             unit = "temp";
-            TEXT.textContent = "PH"
+            TEXT.textContent = "TEMP"
         } else if (currentTab === 'tds') {
             activeData = TDS_Data;
             unit = "TDS";
